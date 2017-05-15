@@ -23,10 +23,10 @@ public class IntervalTools {
 		List<Interval> intervalsSorted = new ArrayList<Interval>();
         
 		// Intervals are sorted by startDate the endDate
-		intervalsSorted = intervals.stream().
-								sorted(Comparator.comparing(Interval::getStart)
-										.thenComparing(Interval::getEnd))
-									.collect(Collectors.toList());
+		intervalsSorted = intervals.stream()
+			.sorted(Comparator.comparing(Interval::getStart)
+			.thenComparing(Interval::getEnd))
+			.collect(Collectors.toList());
         
 		Interval first = intervalsSorted.get(0);
         DateTime start = first.getStart();
